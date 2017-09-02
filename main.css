@@ -1,0 +1,54 @@
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+.yesClick{
+  pointer-events: auto;
+}
+#mainDiv {
+  width:100%;
+  background-color: transparent;
+}
+table#mTable {
+  pointer-events: auto;
+  margin-left: auto;
+  margin-right: 0;
+  border: 2px solid #42b983;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+td.hover {
+  background-color: #56b999;
+  color: white;
+}
+
+th, td {
+  min-width: 50px;
+  padding: 10px 20px;
+}
+
+#demo {
+  pointer-events: none;
+  position: fixed;
+  background-color:transparent;
+  width: 100%;
+  top: 40px;
+}
+
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 50px;
+  cursor:hand;
+}
+
+input.hover {
+  color: white;
+}
