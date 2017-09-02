@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="http://acko.net/files/mathbox2/mathbox-bundle.min.js"></script>
+  <title>MathBox Sandbox</title>
+</head>
+
+<body>
+  <!-- component template -->
+  <script type="text/x-template" id="grid-template">
+  <div @mousemove="mMove($event)" @mouseleave="mUp($event)" @mouseup="mUp($event)" id="mainDiv">
+    <table id="mTable">
+    <thead>{{downPos}}</thead>
+      <tbody>
+        <tr v-for="row in data">
+          <td v-for="cell in row" @mouseover="mOver(cell,$event)" @mouseleave="mLeave(cell,$event)" @mousedown="mDown(cell,$event)" @mouseup="mUp($event)" :class="{hover: cell.hover}" >
+            <input v-model="cell.val" type="text" :class="{hover: cell.hover}" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </script>
+
+  <!-- demo root element -->
+  <div id="demo">
+    <demo-grid :data="gridData">
+    </demo-grid>
+  </div>
+</body>
+
+</html>
